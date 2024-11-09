@@ -9,9 +9,9 @@ COPY extract_alexa_cookie.py /app/extract_alexa_cookie.py
 # Set the working directory
 WORKDIR /app
 
-# Install necessary dependencies
+# Install any necessary dependencies
 RUN apk add --no-cache python3 py3-pip && \
     pip3 install --no-cache-dir requests
 
-# Command to execute the Python script
+# Run the Python script on container start
 CMD ["python3", "/app/extract_alexa_cookie.py"]
