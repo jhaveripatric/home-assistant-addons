@@ -1,6 +1,16 @@
 {
   "name": "Home Assistant Custom Add-ons",
+  "description": "A collection of custom add-ons for Home Assistant, including Alexa Cookie Updater and Ollama.",
   "url": "https://github.com/jhaveripatric/home-assistant-addons",
-  "maintainer": "jhaveripatric",
-  "description": "A collection of custom add-ons for Home Assistant."
+  "maintainer": "Your Name or GitHub Username",
+  "add-ons": [
+    {
+      "slug": "alexa_cookie_updater",
+      "name": "Alexa Cookie Updater"
+    },
+    {
+      "slug": "ollama",
+      "name": "Ollama Add-on"
+    }
+  ]
 }

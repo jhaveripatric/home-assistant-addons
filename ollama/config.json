@@ -1,0 +1,38 @@
+{
+  "name": "Ollama",
+  "version": "1.0",
+  "slug": "ollama",
+  "description": "Run the Ollama AI service in a Docker container as a Home Assistant add-on.",
+  "startup": "application",
+  "boot": "auto",
+  "arch": [
+    "amd64"
+  ],
+  "url": "https://github.com/jhaveripatric/Homeassistant-addons-ollama",
+  "image": "ollama/ollama",
+  "webui": "http://[HOST]:[PORT:11434]/",
+  "ingress": true,
+  "ingress_port": 11434,
+  "panel_icon": "mdi:robot",
+  "panel_title": "Ollama AI",
+  "map": [
+    "ssl"
+  ],
+  "ports": {
+    "11434/tcp": null
+  },
+  "ports_description": {
+    "11434/tcp": "Ollama AI API and Web UI access port"
+  },
+  "init": false,
+  "options": {
+    "model_name": "llama3.2:3b",
+    "debug": false
+  },
+  "schema": {
+    "model_name": "str",
+    "debug": "bool"
+  },
+  "icon": "/icon.png",
+  "logo": "/logo.png"
+}
