@@ -4,6 +4,11 @@ import os
 
 # Retrieve the pickle file name from the environment variable
 pickle_file_name = os.getenv('PICKLE_FILE_NAME', 'alexa_media.default.pickle')  # Default if not set
+
+# Log the retrieved environment variable
+print(f"Retrieved PICKLE_FILE_NAME from environment: {pickle_file_name}")
+
+# Set the paths for the .pickle and JSON files
 pickle_file = f'/config/.storage/{pickle_file_name}'
 json_file = '/config/node-red/alexa-cookie.json'
 
