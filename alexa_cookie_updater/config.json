@@ -4,7 +4,7 @@
   "slug": "alexa_cookie_updater",
   "description": "Extracts Alexa cookie data and saves it for Node-RED.",
   "arch": ["amd64", "aarch64", "armhf", "armv7", "i386"],
-  "startup": "manual",
+  "startup": "once",
   "boot": "manual",
   "options": {
     "pickle_file_name": "alexa_media.YOUR_AMAZON_EMAIL.pickle"
