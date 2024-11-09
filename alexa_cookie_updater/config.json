@@ -13,5 +13,6 @@
     "pickle_file_name": "str"
   },
   "host_network": true,
-  "map": ["config"]
+  "map": ["config"],
+  "init": false
 }
