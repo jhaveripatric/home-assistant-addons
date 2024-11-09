@@ -2,6 +2,11 @@ import pickle
 import json
 import os
 
+# Log all environment variables to check if PICKLE_FILE_NAME is set
+print("All environment variables:")
+for key, value in os.environ.items():
+    print(f"{key}: {value}")
+
 # Retrieve the pickle file name from the environment variable
 pickle_file_name = os.getenv('PICKLE_FILE_NAME', 'alexa_media.default.pickle')  # Default if not set
 
