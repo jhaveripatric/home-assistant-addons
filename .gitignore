@@ -1,0 +1,20 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore Home Assistant secrets and configurations
+secrets.yaml
+*.pickle
+
+# Ignore Node-RED cookie file output
+node-red/alexa-cookie.json
+
+# Ignore any environment or temporary files
+.env
+*.env
+.DS_Store
+*.log
+*.bak
+
+# Ignore Docker build files
+*.tar
