@@ -1,6 +1,6 @@
 {
   "name": "Alexa Cookie Updater",
-  "version": "1.0",
+  "version": "1.1",
   "slug": "alexa_cookie_updater",
   "description": "Extracts Alexa cookie data and saves it for Node-RED.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
