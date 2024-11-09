@@ -1,17 +1,17 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM python:3.12-alpine
 
+# Set environment variables
 ENV LANG C.UTF-8
-
-# Install Python and necessary dependencies
-RUN apk add --no-cache python3 py3-pip
 
 # Copy the Python script into the container
 COPY extract_alexa_cookie.py /app/extract_alexa_cookie.py
 
-# Set up Home Assistant’s add-on service control (s6-overlay)
-# Entrypoint must be /init for s6-overlay to manage services properly
-ENTRYPOINT [ "/init" ]
+# Set the working directory
+WORKDIR /app
 
-# Run the Python script on container start
+# Install necessary dependencies
+RUN apk add --no-cache python3 py3-pip && \
+    pip3 install --no-cache-dir requests
+
+# Command to execute the Python script
 CMD ["python3", "/app/extract_alexa_cookie.py"]
