@@ -8,10 +8,11 @@ for key, value in os.environ.items():
     print(f"{key}: {value}")
 
 # Retrieve the pickle file name from the environment variable
-pickle_file_name = os.getenv('pickle_file_name', 'alexa_media.default.pickle')  # Default if not set
+# Home Assistant passes "pickle_file_name" from options as "PICKLE_FILE_NAME" in uppercase
+pickle_file_name = os.getenv('PICKLE_FILE_NAME', 'alexa_media.default.pickle')
 
 # Log the retrieved environment variable
-print(f"Retrieved pickle_file_name from environment: {pickle_file_name}")
+print(f"Retrieved PICKLE_FILE_NAME from environment: {pickle_file_name}")
 
 # Set the paths for the .pickle and JSON files
 pickle_file = f'/config/.storage/{pickle_file_name}'
