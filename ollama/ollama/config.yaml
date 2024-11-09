@@ -1,0 +1,35 @@
+name: Ollama
+version: latest
+slug: ollama
+description: "Run the Ollama AI service in a Docker container as a Home Assistant add-on."
+startup: application  # Start the add-on after Home Assistant starts
+boot: auto  # The add-on starts automatically with Home Assistant
+arch:
+  - amd64
+url: 'https://github.com/jhaveripatric/Homeassistant-addons-ollama'
+image: 'ollama/ollama'
+webui: 'http://[HOST]:[PORT:11434]/'  # The Web UI URL for the add-on
+ingress: true  # Enable ingress to show the add-on inside Home Assistant UI
+ingress_port: 11434
+panel_icon: 'mdi:robot'  # Sidebar icon in Home Assistant
+panel_title: "Ollama AI"  # Title shown in the Home Assistant sidebar
+map:
+  - ssl
+ports:
+  11434/tcp: null  # Expose port 11434 for API and Web UI interaction
+ports_description:
+  11434/tcp: 'Ollama AI API and Web UI access port'
+init: false
+
+# Define the configurable options for the add-on
+options:
+  model_name: "llama3.2:3b"  # Default model to load
+  debug: false
+
+# Define the schema for the options
+schema:
+  model_name: str
+  debug: bool
+
+icon: "/icon.png"
+logo: "/logo.png"
