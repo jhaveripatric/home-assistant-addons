@@ -1,0 +1,6 @@
+{
+  "name": "Alexa Cookie Updater",
+  "url": "https://github.com/jhaveripatric/home-assistant-addons",
+  "maintainer": "jhaveripatric",
+  "description": "This add-on reads the Alexa Media Player .pickle session file, extracts the cookie, and saves it to a JSON file that can be accessed by Node-RED to keep Alexa functionality synced."
+}
