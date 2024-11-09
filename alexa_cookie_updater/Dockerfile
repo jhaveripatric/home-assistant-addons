@@ -3,14 +3,12 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-# Install Python and the requests package
-RUN apk add --no-cache python3 py3-pip py3-requests
+# Copy a basic script to test s6-overlay behavior
+COPY test_script.sh /app/test_script.sh
+RUN chmod +x /app/test_script.sh
 
-# Copy the Python script into the container
-COPY extract_alexa_cookie.py /app/extract_alexa_cookie.py
-
-# Make sure the entrypoint uses s6-overlay
+# Use s6-overlay entrypoint
 ENTRYPOINT [ "/init" ]
 
-# Run the Python script via s6-overlay
-CMD ["python3", "/app/extract_alexa_cookie.py"]
+# Execute a minimal command to check for s6-overlay issues
+CMD ["/app/test_script.sh"]
